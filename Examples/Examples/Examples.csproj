@@ -45,8 +45,12 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WorkingArrays\DecimalArray.cs" />
+    <Compile Include="WorkingArrays\Interfaces\ISort.cs" />
     <Compile Include="WorkingArrays\SimpleArray.cs" />
     <Compile Include="WorkingArrays\IntArray.cs" />
+    <Compile Include="WorkingArrays\Store.cs" />
+    <Compile Include="WorkingArrays\StoreArray.cs" />
     <Compile Include="WorkingArrays\StringArray.cs" />
   </ItemGroup>
   <ItemGroup>

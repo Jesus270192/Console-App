@@ -11,25 +11,18 @@ namespace Examples
     {
         static void Main(string[] args)
         {
-            IntArray array = new IntArray(10,2,3);
+            IntArray array = new IntArray(10, 2, 3);
+            DecimalArray decArr = new DecimalArray(decimal.One, decimal.Zero, decimal.MaxValue);
             StringArray arrayString = new StringArray("Monica", "Chuy", "Chato");
+            StoreArray store = new StoreArray(new Store() { Name="Monica" }, new Store() { Name = "Chuy" }, new Store() { Name = "Chato" });
 
-            int suma =  Encoding.ASCII.GetBytes("chUy".ToLower()).Sum(s=>s);
+            array.PrintArray();
+            decArr.PrintArray();
+            arrayString.PrintArray();
+            store.PrintArray();
 
-            array.BubbleSort();
-            arrayString.OrderbyDesc();
-
-            for (int i = 0; i < arrayString.MyArray.Length; i++)
-            {
-                Console.Write($"{arrayString.MyArray[i]}");
-                Console.Write("\n");
-            }
-
-            Console.Write("Hola mundo");
+            Console.Write("Press any key to exit");
             Console.ReadLine();
         }
-
-
-
     }
 }

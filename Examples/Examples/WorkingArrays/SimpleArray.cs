@@ -8,7 +8,7 @@ namespace Examples.WorkingArrays
 {
     public abstract class SimpleArray<Type>
     {
-        public Type[] MyArray;
+        protected Type[] MyArray;
 
         public SimpleArray(Type[] array)
         {
@@ -35,10 +35,27 @@ namespace Examples.WorkingArrays
             MyArray = new Type[4] { v1, v2, v3,v4 };
         }
 
-        public abstract void Orderby();
+        public  void Orderby()
+        {
+            MyArray = MyArray.OrderBy(s => s).ToArray();
+        }
 
-        public abstract void OrderbyDesc();
+        public void OrderbyDesc()
+        {
+            MyArray = MyArray.OrderByDescending(s => s).ToArray();
+        }
 
-        public abstract void BubbleSort();
+        public virtual void PrintArray()
+        {
+            Console.WriteLine(MyArray.GetType().Name);
+            
+            for (int i = 0; i < MyArray.Length; i++)
+            {
+                Console.WriteLine(MyArray[i]);
+            }
+
+            Console.WriteLine();
+        }
+
     }
 }
